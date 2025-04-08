@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+{% block title %}HR Dashboard{% endblock %}
+{% block content %}
+  <h2>HR Dashboard</h2>
+  <h5>PDR Scores</h5>
+  <table class="table">
+    <thead><tr><th>Employee</th><th>Score</th><th>Next Appraisal</th></tr></thead>
+    <tbody>
+      <tr><td>Jane Doe</td><td>4.5</td><td>2025-06-01</td></tr>
+      <tr><td>John Doe</td><td>3.8</td><td>2025-05-15</td></tr>
+    </tbody>
+  </table>
+  <h5>CPD Records</h5>
+  <table class="table">
+    <thead><tr><th>Employee</th><th>Training</th><th>Date</th><th>Hours</th></tr></thead>
+    <tbody>
+      <tr><td>Jane Doe</td><td>Fire Safety</td><td>2025-03-10</td><td>2</td></tr>
+      <tr><td>John Doe</td><td>Manual Handling</td><td>2025-03-15</td><td>3</td></tr>
+    </tbody>
+  </table>
+{% endblock %}

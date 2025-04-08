@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+{% block title %}COSHH & Inventory{% endblock %}
+{% block content %}
+  <h2>COSHH & Inventory</h2>
+  <ul class="nav nav-tabs">
+    <li class="nav-item"><a class="nav-link active" href="#">EME</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">RTS</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">MFL</a></li>
+  </ul>
+  <table class="table table-bordered mt-3">
+    <thead><tr><th>Item</th><th>Quantity</th><th>Last Checked</th></tr></thead>
+    <tbody>
+      <tr><td>Chlorine Tablets</td><td>120</td><td>2025-04-01</td></tr>
+      <tr><td>Face Shields</td><td>300</td><td>2025-03-20</td></tr>
+      <tr><td>Sodium Hypochlorite</td><td>25 L</td><td>2025-03-15</td></tr>
+    </tbody>
+  </table>
+{% endblock %}

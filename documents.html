@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% block title %}Document Library{% endblock %}
+{% block content %}
+  <h2>Document Library</h2>
+  <form method="POST" enctype="multipart/form-data" class="mb-3">
+    <div class="row">
+      <div class="col-md-3"><input type="text" name="ref" placeholder="Document Ref No" class="form-control" required></div>
+      <div class="col-md-3"><input type="text" name="name" placeholder="Document Name" class="form-control" required></div>
+      <div class="col-md-3"><input type="text" name="department" placeholder="Department" class="form-control" required></div>
+      <div class="col-md-3"><input type="file" name="file" class="form-control" required></div>
+    </div>
+    <button class="btn btn-success mt-2">Upload</button>
+  </form>
+  <table class="table table-bordered mt-3">
+    <thead><tr><th>Ref No</th><th>Name</th><th>Department</th><th>File</th></tr></thead>
+    <tbody>
+      {% for doc in documents %}
+        <tr>
+          <td>{{ doc.ref }}</td>
+          <td>{{ doc.name }}</td>
+          <td>{{ doc.department }}</td>
+          <td><a href="{{ url_for('static', filename='uploads/' + doc.filename) }}" target="_blank">View</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
