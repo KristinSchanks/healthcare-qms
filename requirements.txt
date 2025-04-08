@@ -1,0 +1,6 @@
+flask
+flask-login
+flask-sqlalchemy
+werkzeug
+jinja2
+gunicorn
